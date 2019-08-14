@@ -15,6 +15,8 @@ module.exports = appInfo => {
   // use for cookie sign key, should change to your own and keep security
   config.keys = appInfo.name + '_1564724739297_8604';
 
+  // 钉钉使用的各种参数
+
   // add your middleware config here
   config.middleware = [];
 
@@ -23,6 +25,14 @@ module.exports = appInfo => {
     listen: {
       port: 50001,
       hostname: '0.0.0.0',
+    },
+  };
+
+  // 设置模板引擎
+  config.view = {
+    defaultViewEngine: 'nunjucks',
+    mapping: {
+      '.njk': 'nunjucks',
     },
   };
 

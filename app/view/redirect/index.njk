@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+    .url {
+      word-wrap: break-word;
+      height: 200px;
+      width: 100%;
+    }
+
+    .btn {
+      height: 30px;
+      line-height: 30px;
+      background: aqua;
+      text-align: center;
+    }
+    </style>
+    <title>酷学院</title>
+  </head>
+  <body>
+    <div class="url">{{ url }}</div>
+    <div class="btn" data-clipboard-action="copy" data-clipboard-target=".url">
+      长摁上文url复制，并在浏览器中打开
+    </div>
+    <script>
+    const reg = new RegExp('(^|&)' + 'url' + '=([^&]*)(&|$)', 'i');
+    const r = window.location.search.substr(1)
+      .match(reg);
+    const url = decodeURIComponent(r[ 2 ]);
+    window.location.href = url
+    </script>
+  </body>
+</html>
