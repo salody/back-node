@@ -15,12 +15,12 @@ module.exports = appInfo => {
   };
 
   // // 配置启动端口
-  // config.cluster = {
-  //   listen: {
-  //     port: 50001,
-  //     hostname: '0.0.0.0',
-  //   },
-  // };
+  config.cluster = {
+    listen: {
+      port: 50001,
+      hostname: '0.0.0.0',
+    },
+  };
 
   // 设置模板引擎
   config.view = {
