@@ -1,0 +1,32 @@
+.progress {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    &__text {
+        min-width: 120px;
+        font-size: 24px;
+        color: #000;
+    }
+
+    &__bar {
+        flex: 1;
+        margin-left: 10px;
+
+        &__outer {
+            position: relative;
+            width: 100%;
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.06);;
+        }
+
+        &__inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 8px;
+            background-color: #B7BAC8;
+        }
+    }
+}

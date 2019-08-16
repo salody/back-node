@@ -1,0 +1,159 @@
+@import "../../../styles/themes/default.less";
+
+.practiceList {
+    height: 100%;
+    padding: 96px 30px 0;
+    background:rgba(247,248,250,1);
+    ::-webkit-scrollbar {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    ::-webkit-scrollbar-thumb {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    ::-webkit-scrollbar-track {
+        display: none;
+        width: 0px;
+        height: 0px;
+    }
+    .listContainer {
+        padding: 30px 0 0;
+    }
+    .practiceSearch {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 96px;
+      display: flex;
+      align-items: center;
+      padding: 0 36px;
+      background: #465dcd;
+      z-index: 10;
+    }
+}
+.menuSheet {
+    height: 112px;
+    border-bottom: 2px solid #EBECF3;
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+        font-size: 36px;
+        color: #2D3040;
+        span {
+            margin-right: 14px;
+        }
+    }
+}
+.practiceItem {
+    margin-bottom: 30px;
+    border-radius:8px;
+    overflow: hidden;
+    // box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgb(235, 236, 243);
+    .topDisplay {
+        width: 100%;
+        height: 388px;
+        position: relative;
+        .coverImg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .topInfo {
+            position: absolute;
+            bottom: 0px;
+            left: 0;
+            padding: 60px 28px 16px;
+            width: 100%;
+            z-index: 2;
+            background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,0.6) 100%);
+            .title {
+                margin: 0;
+                font-size:36px;
+                font-weight:500;
+                color:rgba(255,255,255,1);
+                line-height:50px;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+            }
+            .questionCount {
+                font-size:24px;
+                font-family:PingFangSC-Regular;
+                font-weight:400;
+                color:rgba(255,255,255,1);
+                line-height:34px;
+                text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+                span {
+                    padding: 0 6px;
+                }
+            }
+        }
+    }
+    .bottomOperate {
+        background: #fff;
+        .operateOne {
+            border-bottom: 2px solid #EBECF3;
+            display: inline-flex;
+            width: 100%;
+            padding: 0 24px;
+            box-sizing: border-box;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            height:96px;
+            text-decoration: none;
+            a {
+                display: inline-flex;
+                width: 100%;
+                box-sizing: border-box;
+                flex-flow: row nowrap;
+                justify-content: flex-start;
+                align-items: center;
+                height:96px;
+                text-decoration: none;
+            }
+            &.operateDisable {
+                opacity: 0.5;
+            }
+            &:last-child {
+                border-bottom: none;
+            }
+            .labelIcon {
+                margin-right: 18px;
+            }
+            .operateLabel {
+                flex: 1;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                font-size: 30px;
+                color: #2D3040;
+            }
+            .errorCount {
+                margin-right: 10px;
+                font-size: 30px;
+                color: @primary-color;
+            }
+            .isNew {
+                margin-right: 16px;
+                width:44px;
+                height:32px;
+                line-height: 35px;
+                background:rgba(241,52,52,1);
+                border-radius:16px;
+                font-size: 22px;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+}

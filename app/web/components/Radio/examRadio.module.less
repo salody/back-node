@@ -1,0 +1,77 @@
+@import "../../styles/themes/default.less";
+
+.radioContainer {
+    width: 100%;
+    .radioOne {
+        display: inline-flex;
+        width: 100%;
+        align-items: flex-start;
+        line-height: 44px;
+        margin-bottom: 42px;
+        &.radioActive {
+            .radioOrder {
+                background: @primary-color;
+                border-color: #fff;
+                color: #fff;
+            }
+        }
+        .radioOrder {
+            box-sizing: border-box;
+            width: 50px;
+            height: 50px;
+            line-height: 48px;
+            margin-right: 18px;
+            border-radius: 50%;
+            text-align: center;
+            color: #2d3040;
+            font-size: 28px;
+            background: #fff;
+            border:2px solid rgba(217,219,228,1);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .multipleRadio {
+            border-radius:8px;
+            span {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%
+            }
+        }
+        .radioLabel {
+            flex: 1;
+            flex-flow: column wrap;
+            line-height: 44px;
+            margin-top: 3px;
+            color: #2d3040;
+            font-size: 32px;
+        }
+    }
+    &.showResult {
+        .radioOne.radioActive .radioOrder {
+            background: #e90000;
+            color: #fff;
+            font-size: 22px;
+            border-color: #e90000;
+        }
+        .radioOne.radioActive .radioLabel {
+            color: #e90000;
+        }
+        .radioOne.correctOption .radioOrder {
+            background: #2bb81b;
+            color: #fff;
+            font-size: 22px;
+            border-color: #2bb81b;
+            &.correctNoCheck.multipleRadio {
+                border-color: #2bb81b;
+                color: #2bb81b;
+                background: transparent;
+                font-size: 24px;
+            }
+        }
+        .radioOne.correctOption .radioLabel {
+            color: #2bb81b;
+        }
+    }
+}

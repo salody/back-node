@@ -1,0 +1,77 @@
+
+.container {
+    width: 100%;
+    box-sizing: border-box;
+    .imageBox {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            max-height: 100%;
+            max-width: 100%;
+            display: block;
+        }
+    }
+}
+.singleContainer {
+    height:300px;
+    display: flex;
+    justify-content: center;
+    .imageBox { 
+       width: 100%; 
+    }
+}
+
+.doubleContainer {
+    height:192px;
+    display: flex;
+    justify-content: space-between;
+    .imageBox {
+        width: 342px;
+    }
+}
+
+.threefoldContainer {
+    height:226px;
+    display: flex;
+    justify-content: space-around;
+    .imageBox {
+        width: 226px;
+    }
+}
+
+.fourfoldContainer {
+   height: fit-content;
+   .doubleContainer {
+     margin-bottom: 6px;
+   }
+}
+
+.fivefoldContainer {
+    height: fit-content;
+    .doubleContainer,
+    .threefoldContainer {
+      margin-bottom: 6px;
+    }
+}
+
+.sixfoldContainer {
+    height: fit-content;
+    .threefoldContainer {
+      margin-bottom: 6px;
+    }
+}
+
+.multifoldContainer {
+    display: flex;
+    flex-wrap: wrap;
+    .imageBox {
+        width: 342px;
+        height: 260px;
+        margin-bottom: 6px;
+    }
+    .imageBox:nth-child(odd) {
+        margin-right: 6px;
+    }
+}

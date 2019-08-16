@@ -1,0 +1,35 @@
+
+.watermarkContainer {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    color: #000;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 30px;
+    overflow: hidden;
+    opacity: 0.1;
+    padding: 28px 28px 0;
+    box-sizing: border-box;
+    z-index: -1;
+    pointer-events: none;
+    .watermarkItem {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 50px;
+        padding-bottom: 160px;
+        .content {
+            transform: rotate(-35deg);
+            width: 100%;
+            word-break: break-all;
+            text-align: center;
+        }
+    }
+}

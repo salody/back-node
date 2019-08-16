@@ -1,0 +1,28 @@
+@import "./themes/default";
+@import "./core/index";
+
+.container {
+  width: 750px;
+  //height: 100%;
+  height: 50vh;
+  background: @primary-color;
+  color: bisque;
+  font-size: 28px;
+}
+
+.footbar {
+  .foot-bar();
+  margin-bottom: 200px;
+  width: 40px;
+  right: 20px;
+}
+
+@media (min-width: 415px) {
+  .container {
+    width: 500px;
+    margin: 0 auto;
+    font-size: 16px;
+    background: url("../assets/img/1.jpg");
+    height: 130px;
+  }
+}

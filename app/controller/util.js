@@ -5,6 +5,11 @@ const ip = require('ip');
 const ipLocation = require('iplocation').default;
 
 class UtilController extends Controller {
+  async index() {
+    const { ctx } = this;
+    ctx.body = 'hi, egg';
+  }
+
   async getIp() {
     const { ctx } = this;
     const ipAddress = ctx.params.address;
