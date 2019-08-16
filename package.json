@@ -79,7 +79,7 @@
     "node": ">=10.0.0"
   },
   "scripts": {
-    "start": "npm run build && egg-scripts start --port=7001 --daemon --title=egg-umi-ssr --env=prod",
+    "start": "npm run build && egg-scripts start --port=50001 --daemon --title=egg-umi-ssr --env=prod",
     "stop": "egg-scripts stop --title=egg-umi-ssr",
     "dev": "egg-bin dev --port=7001 --sticky",
     "debug": "cross-env RM_TMPDIR=none COMPRESS=none egg-bin debug",
