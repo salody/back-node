@@ -11,7 +11,7 @@ export const getArticleDetail = articleId => {
     const http = require('http')
     const https = require('https')
     return axios.get(url, {
-      timeout:    5000,
+      timeout:    1000,
       httpAgent:  new http.Agent({ keepAlive: true }),
       httpsAgent: new https.Agent({ keepAlive: true }),
     })
