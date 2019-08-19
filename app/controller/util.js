@@ -1,6 +1,4 @@
-'use strict';
-
-const Controller = require('egg').Controller;
+const { Controller } = require('egg');
 const ip = require('ip');
 const ipLocation = require('iplocation').default;
 
@@ -23,7 +21,6 @@ class UtilController extends Controller {
 
   async redirect() {
     const { ctx } = this;
-    console.log(ctx.get('user-agent'));
     const ua = ctx.get('user-agent').toLowerCase();
     const url = decodeURIComponent(ctx.query.url);
     if (/aliapp/i.test(ua)) {

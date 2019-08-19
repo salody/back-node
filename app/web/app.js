@@ -10,7 +10,6 @@ const localeAlias = {
 };
 
 
-
 // global.document.addEventListener('DOMContentLoaded', function () {
 //
 // });

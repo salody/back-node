@@ -8,7 +8,7 @@ import errorInfo from '@/utils/errorInfo'
 
 class Request {
   constructor(props = {}) {
-    //设置axios为form-data
+    // 设置axios为form-data
     const isFormData = props.type === 'formData'
     let request
     if (isFormData) {
@@ -74,32 +74,35 @@ class Request {
   }
 
   handleError(error) {
-    Loading.hide()
-    if (error.response && error.response.status === 401) {
-      const res = error.response.data
-      if (res.code === 'enterpriseapi.2001') {
-        dd.postMessage({
-          msg: 'invalidToken'
-        })
-      }
-    } else if (error.response) {
-      let errCode = error.response.data.code
-      Modal.alert({
-        title:        'ERROR',
-        content:      `${errorInfo[errCode].content}`,
-        clickHandler: () => {
-          // if (typeof dd !== 'undefined') {
-          //   dd.postMessage({
-          //     msg: 'serverErr'
-          //   })
-          // }
+    if (__IS_BROWSER) {
+      Loading.hide()
+      if (error.response && error.response.status === 401) {
+        const res = error.response.data
+        if (res.code === 'enterpriseapi.2001') {
+          dd.postMessage({
+            msg: 'invalidToken'
+          })
         }
-      })
-      // store.dispatch('createAlert', { type: 'success', message: '内部错误' })
+      } else if (error.response) {
+        console.log('lalal')
+        const errCode = error.response.data.code
+        Modal.alert({
+          title:        'ERROR',
+          content:      `${errorInfo[errCode].content}`,
+          clickHandler: () => {
+            // if (typeof dd !== 'undefined') {
+            //   dd.postMessage({
+            //     msg: 'serverErr'
+            //   })
+            // }
+          }
+        })
+        // store.dispatch('createAlert', { type: 'success', message: '内部错误' })
+      }
+      // if (res.code === 'crawler.005') {
+      //   store.dispatch('createAlert', { type: 'success', message: '当前链接不支持添加' })
+      // }
     }
-    // if (res.code === 'crawler.005') {
-    //   store.dispatch('createAlert', { type: 'success', message: '当前链接不支持添加' })
-    // }
     return Promise.reject(error)
   }
 

@@ -18,6 +18,7 @@ module.exports = {
   },
   globals: {
     IS_PRERENDER: true,
+    __IS_BROWSER: true,
     API: true,
     GLOBAL: true,
     dd: true

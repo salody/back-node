@@ -14,7 +14,7 @@ const config = {
     [
       'umi-plugin-react',
       {
-        hd: true,
+        hd: false,
         locale: {
           baseNavigator: false,
         },

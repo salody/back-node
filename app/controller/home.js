@@ -1,5 +1,3 @@
-'use strict';
-
 const { Controller } = require('egg');
 const { join } = require('path');
 const ssrPolyfill = require('ssr-polyfill');
@@ -66,8 +64,8 @@ class HomeController extends Controller {
 
     await ctx.render('index.html', {
       ssrContent,
-      jsChunks: js.slice(1),
-      cssChunks: css,
+      jsChunks:      js.slice(1),
+      cssChunks:     css,
       g_initialData: encodeURIComponent(JSON.stringify(g_initialData)),
       ...htmlExtra,
     });

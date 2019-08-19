@@ -59,7 +59,7 @@ class PracticeList extends React.Component {
   static getInitialProps = async ({ store, route, isServer }) => {
     // new dva ins
     const e = {
-      access_token: '60230a490b0d5d961b9ce39419c56c5c',
+      access_token: '6bc011bbfd7a8ddedd3a89e7d57f0f1f',
       enterpriseId: '948467577997365248',
       userId:       '1789916475256082432',
       watermarks:   [],

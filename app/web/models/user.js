@@ -16,7 +16,6 @@ export default {
   },
   reducers: {
     save(state, { payload }) {
-      console.log(payload)
       state.info = payload.userInfo
       state.info.avater = payload.userInfo.avatar || defaultAvatar
     }

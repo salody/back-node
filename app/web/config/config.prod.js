@@ -1,9 +1,9 @@
-'use strict';
+
 
 module.exports = {
-  hash: true,
+  hash:       true,
   publicPath: '',
-  manifest: {
+  manifest:   {
     fileName: '../../config/manifest.json',
   },
   define: {

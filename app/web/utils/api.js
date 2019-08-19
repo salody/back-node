@@ -24,14 +24,10 @@ const APIConfig = {
     return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/${scope.practiceId}/query_question`
   },
   getWrongPracticeQuestion(scope) {
-    return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/${
-      scope.practiceId
-    }/query_wrong_question`
+    return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/${scope.practiceId}/query_wrong_question`
   },
   saveQuestionAnswer(scope) {
-    return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/${scope.practiceId}/questions/${
-      scope.questionId
-    }/save`
+    return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/${scope.practiceId}/questions/${scope.questionId}/save`
   },
   checkShowWrongTip() {
     return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/alert/query`
@@ -39,7 +35,7 @@ const APIConfig = {
   setCheckShowWrongTip() {
     return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/practices/alert`
   },
-  // 网站
+  //网站
   getIndustry() {
     return `${API.PLATFORM}/register/industry`
   },
@@ -70,8 +66,19 @@ const APIConfig = {
   },
   rceivePostMapReward(scope) {
     return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/post_maps/${scope.mapId}/get_awards`
+  },
+  saveProgress(scope) {
+    return (
+      `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/studies/${scope.studyId}/courses` +
+      `/${scope.courseId}/resources/${scope.resourceId}/save_progress`
+    )
+  },
+  saveCourseProgress(scope) {
+    return `${API.ENTERPRISE}/v2/${this.enterpriseId}/users/${this.userId}/courses/${scope.courseId}/resources/${scope.resourceId}/save_progress`
+  },
+  getArticleDetail(scope) {
+    return `${API.ENTERPRISE}/v2/${this.enterpriseId}/resources/${scope.articleId}/query`
   }
-
   // 岗位地图end
 }
 

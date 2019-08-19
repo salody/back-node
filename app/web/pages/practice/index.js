@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { formatMessage, getLocale, FormattedMessage } from 'umi-plugin-locale';
+import { formatMessage, FormattedMessage } from 'umi-plugin-locale';
 import { connect } from 'dva'
 // 打印当前使用语言
 
@@ -7,9 +7,6 @@ import { connect } from 'dva'
   isContinue: practice.isContinue
 }))
 export default class List extends Component {
-
-
-
   render() {
     return (
       <div>

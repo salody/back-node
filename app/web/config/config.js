@@ -16,6 +16,16 @@ const routes = [
     path:      '/practiceList',
     title:     '智能练习',
     component: '../pages/practice/list/index'
+  },
+  {
+    path:      '/article',
+    title:     '文章',
+    component: '../pages/article/index'
+  },
+  {
+    path:      '/previewDoc',
+    title:     '文档预览',
+    component: '../pages/docReader/index'
   }
 ];
 
