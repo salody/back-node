@@ -15,7 +15,7 @@ class Article extends React.Component {
   // 这里的参数要注意，req是server端才有的
   static getInitialProps = async ({ store, route, isServer, req }) => {
     const e = {
-      access_token: '6bc011bbfd7a8ddedd3a89e7d57f0f1f',
+      access_token: 'c960e8bfae33e4fd2e28524810690ce1',
       enterpriseId: '948467577997365248',
       userId:       '1789916475256082432',
       watermarks:   [],
