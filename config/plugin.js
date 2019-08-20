@@ -14,3 +14,8 @@ exports.i18n = {
   enable: true,
   package: 'egg-i18n',
 };
+
+exports.alinode = {
+  enable: true,
+  package: 'egg-alinode',
+};
