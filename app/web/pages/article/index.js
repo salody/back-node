@@ -29,24 +29,25 @@ class Article extends React.Component {
     if (isServer) {
       // req: { url: '/article?from=23&articleId=998' }
 
-      const queryStr = (req.url || '').split('?')[1];
-      if (queryStr) {
-        const query = queryString.parse(queryStr);
-        const { articleId } = query;
-        await store.dispatch({
-          type:    'user/saveUserInfo',
-          payload: {
-            userInfo: e
-          }
-        });
-        API.initApi(e);
-        await store.dispatch({
-          type:    'article/getArticle',
-          payload: {
-            articleId: articleId || '1789887333194141696'
-          }
-        });
-      }
+      // const queryStr = (req.url || '').split('?')[1];
+      // if (queryStr) {
+      //   const query = queryString.parse(queryStr);
+      //   const { articleId } = query;
+      //   await store.dispatch({
+      //     type:    'user/saveUserInfo',
+      //     payload: {
+      //       userInfo: e
+      //     }
+      //   });
+      //   API.initApi(e);
+      //   await store.dispatch({
+      //     type:    'article/getArticle',
+      //     payload: {
+      //       articleId: articleId || '1789887333194141696'
+      //     }
+      //   });
+      // }
+      // do n0thing
     } else {
       const { from, articleId, planId, courseId } = queryString.parse(location.search);
       await store.dispatch({
